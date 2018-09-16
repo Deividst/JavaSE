@@ -1,0 +1,41 @@
+import java.lang.invoke.SwitchPoint;
+
+public class Viajem {
+	
+	private int codigo;
+	private String[] passageiros;
+	
+	public Viajem(int codigo, int qdtLugares) {
+		this.codigo = codigo;
+		this.passageiros = new String[qdtLugares];
+	}
+	
+	public Viajem() {
+		Teclado t = new Teclado();
+		
+		this.codigo = t.leInt("Informe o codigo");
+		int nroSorteado = (int) (Math.random() * 3);
+		
+		if (nroSorteado == 1) {
+			this.passageiros = new String[12];
+		} else if ( nroSorteado == 2) {
+			this.passageiros = new String[23];
+		}else {
+			this.passageiros = new String[41];
+		}
+	}
+	
+	public void listarLugares() {
+		System.out.println("--- Lugares no onibus ---");
+		for (int i = 0; i < passageiros.length; i++) {
+			System.out.println((i+1) + " - ");
+			if (passageiros[i] == null) {
+				System.out.print("Livre");
+			} else {
+				System.out.print(passageiros[i] + "\n");
+			}
+		}
+	}
+	
+
+}

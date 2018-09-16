@@ -1,0 +1,19 @@
+
+public class TestaProdutos {
+	public static void main(String[] args) {
+		
+		Teclado t = new Teclado();
+		
+		Deposito d = new Deposito(t.leInt("Informe o tamanho do estoque"));
+		
+		d.insereProdutos();
+		d.exibeEstoque();
+		d.precoMaisBaixo();
+		d.produtoMaisCaro();
+		d.precoMedio();
+		d.buscaProduto(t.leInt("Informe o codigo para busca"));
+		
+		
+	}
+
+}

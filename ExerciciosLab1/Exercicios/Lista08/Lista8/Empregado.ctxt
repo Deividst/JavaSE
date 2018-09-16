@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Empregado
+comment1.params=nome\ idade\ sexo\ salarioBase
+comment1.target=Empregado(java.lang.String,\ int,\ char,\ double)
+comment2.params=salarioBase
+comment2.target=void\ setSalarioBase(double)
+comment3.params=
+comment3.target=double\ getSalarioBase()
+comment4.params=faltas
+comment4.target=double\ calculaSalarioLiquidoMes(int)
+comment5.params=
+comment5.target=void\ exibeDados()
+numComments=6

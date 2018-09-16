@@ -1,0 +1,10 @@
+
+public class TesteViajem {
+
+	public static void main(String[] args) {
+		
+		Viajem v = new Viajem();
+
+	}
+
+}

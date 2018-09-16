@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=SocioAtleta
+comment1.params=nome\ idade\ altura
+comment1.target=SocioAtleta(java.lang.String,\ int,\ double)
+comment2.params=
+comment2.target=void\ calculoCategoria()
+comment3.params=
+comment3.target=void\ aniversario()
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment5.params=altura
+comment5.target=void\ exameSaude(double)
+comment6.params=altura
+comment6.target=void\ setAltura(double)
+comment7.params=
+comment7.target=double\ getAltura()
+comment8.params=
+comment8.target=java.lang.String\ getCategoria()
+numComments=9

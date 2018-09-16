@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=ContaCorrente
+comment1.params=
+comment1.target=int\ getNumero()
+comment2.params=
+comment2.target=Cliente\ getCliente()
+comment3.params=
+comment3.target=double\ getSaldo()
+comment4.params=numero\ cliente
+comment4.target=ContaCorrente(int,\ Cliente)
+comment5.params=deposito
+comment5.target=void\ deposita(double)
+comment6.params=valor
+comment6.target=boolean\ retira(double)
+numComments=7

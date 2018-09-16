@@ -1,0 +1,113 @@
+import java.lang.invoke.SwitchPoint;
+
+public class Viajem {
+	
+	private int codigo;
+	private String[] passageiros;
+	
+	public Viajem(int codigo, int qdtLugares) {
+		this.codigo = codigo;
+		this.passageiros = new String[qdtLugares];
+	}
+	
+	public Viajem() {
+		Teclado t = new Teclado();
+		
+		this.codigo = t.leInt("Informe o codigo");
+		int nroSorteado = (int) (Math.random() * 3);
+		
+		if (nroSorteado == 1) {
+			this.passageiros = new String[12];
+		} else if ( nroSorteado == 2) {
+			this.passageiros = new String[23];
+		}else {
+			this.passageiros = new String[41];
+		}
+	}
+	
+	public void listarLugares() {
+		System.out.println("--- Lugares no onibus ---");
+		for (int i = 0; i < passageiros.length; i++) {
+			System.out.print((i+1) + " - ");
+			if (passageiros[i] == null) {
+				System.out.print("Livre \n");
+			} else {
+				System.out.print(passageiros[i] + "\n");
+			}
+		}
+	}
+	
+	public void listaLugaresLivres() {
+		System.out.println("--- Lugares disponoveis no onibus -- ");
+		for (int i = 0; i < passageiros.length; i++) {
+			if (passageiros[i] == null) {
+				System.out.println((i+1) + " - Livre");
+			}
+		}
+	}
+	
+	public boolean vendeLugar(String nomePassageiro) {
+		
+		Teclado t = new Teclado();
+		if (estaLotacao()) {
+			System.out.println("Onibus lotado");
+			return false;
+		}
+			listaLugaresLivres();
+		
+		boolean ok = false;
+		int num;
+		do {
+			num = t.leInt("Informe o numero do lugar");
+				if (passageiros[num] == null && num < passageiros.length) {
+					passageiros[num] = nomePassageiro;
+					ok = true;
+				}	
+			} while (!ok);
+			
+		return true;
+		
+		
+	}
+
+	private boolean estaLotacao() {
+		int cont = 0;
+		for (int i = 0; i < passageiros.length; i++) {
+			if (passageiros[i] != null) {
+				cont++;
+			}
+		}
+		if (cont == passageiros.length) {
+			
+			return true;
+			
+		} else {
+			
+		return false;
+	}
+	}
+	
+	public int buscaPassageiro(String nome) {
+		for (int i = 0; i < passageiros.length; i++) {
+			if (nome.equals(passageiros[i])) {
+				System.out.println("Lugar :" + (i+1)+" - " + passageiros[i]);
+				return i+1;
+			}
+		}
+		
+		return 0;
+	}
+	
+	public boolean desistencia(String nome) {
+		int lugar = buscaPassageiro(nome);
+		if (lugar != 0) {
+			passageiros[lugar] = null;
+			return true;
+		} else {
+			return false;
+		}
+		
+	}
+	
+
+}

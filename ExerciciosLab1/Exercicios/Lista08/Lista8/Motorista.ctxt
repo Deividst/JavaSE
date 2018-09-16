@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Motorista
+comment1.params=nome\ idade\ sexo\ salarioBase
+comment1.target=Motorista(java.lang.String,\ int,\ char,\ double)
+comment2.params=
+comment2.target=double\ getValorDiaria()
+comment3.params=dias
+comment3.target=double\ calculaSalarioLiquidoMes(double)
+comment4.params=
+comment4.target=void\ exibeDados()
+numComments=5

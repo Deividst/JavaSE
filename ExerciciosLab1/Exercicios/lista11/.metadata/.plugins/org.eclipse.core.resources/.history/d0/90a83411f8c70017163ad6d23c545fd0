@@ -1,0 +1,24 @@
+
+public class TesteViajem {
+
+	public static void main(String[] args) {
+		
+		Viajem v = new Viajem();
+		Teclado t = new Teclado();
+		
+		public int menu() {
+			
+		boolean ok = false;
+			do {
+		System.out.println("--- Bem vindo ---");
+		System.out.println("1 - Vende lugar" +
+					"\n" + "2 - Desistência" +
+					"\n" + "3 - Lista de lugares" +
+					"\n" + "4 - Encarrar");
+		 int op = t.leInt("Escolha uma opção");
+		 
+		 while(!ok);
+		}
+	}
+
+}

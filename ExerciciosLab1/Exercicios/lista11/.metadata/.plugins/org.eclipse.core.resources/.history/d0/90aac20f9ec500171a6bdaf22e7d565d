@@ -1,0 +1,20 @@
+
+public class Lista11 {
+
+	public int verificaArrays(int[] a, int[] b) {
+		
+		int cont = 0;
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; j < b.length; j++) {
+				if (a[i] == b[j]) {
+					cont++;
+				}
+			}
+		}
+		return cont;
+	}
+	
+	
+	
+	
+}

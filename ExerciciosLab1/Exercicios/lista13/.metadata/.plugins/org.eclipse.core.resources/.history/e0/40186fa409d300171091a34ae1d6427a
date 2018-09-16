@@ -1,0 +1,89 @@
+
+public class EmpregadoVendedor extends Empregado {
+
+	
+	private double[] totalVendasDia;
+	private double valorTotalComissao;
+	
+	public EmpregadoVendedor(String nome, double salarioMensal, int mesDoAno) {
+		super(nome, salarioMensal);
+		totalVendasDia = new double[28];
+		mesDoAno = 2;
+		
+	}
+	
+	public void fazVenda(int dia, double valor) {
+		totalVendasDia[dia] += valor; 
+	}
+	
+	public void calculaComissao(double taxa) {
+		double aux = 0;
+		for (int i = 0; i < totalVendasDia.length; i++) {
+			aux += totalVendasDia[i];
+			valorTotalComissao = ((aux * taxa) / 100);
+		}
+	}
+	
+	@Override
+	public double calculaSalarioLiquidoMes() {
+		double aux = super.calculaSalarioLiquidoMes();
+		return aux + valorTotalComissao;
+	}
+	
+	@Override
+	public void emiteContraCheque() {
+		double totalVendas = 0;
+		super.emiteContraCheque();
+		for (int i = 0; i < totalVendasDia.length; i++) {
+			totalVendas += totalVendasDia[i];
+			System.out.println("Total de Vendas: " + totalVendas);
+			System.out.println("Valor da Comissão: " + this.valorTotalComissao);
+		}
+	}
+	
+	public int melhorDiaDoVendedor() {
+		int aux = 0;
+		double vendas = 0;
+		for (int i = 0; i < totalVendasDia.length; i++) {
+			if (totalVendasDia[i] > vendas) {
+				vendas = totalVendasDia[i];
+				aux = i;
+			}
+		}
+		return aux;
+	}
+	
+	public double[] tresMelhoresDias() {
+		
+		double[] tres = new double[3];
+		double[] venda = new double[totalVendasDia.length];
+	
+			for (int i = 0; i < totalVendasDia.length; i++) {
+			venda[i] = totalVendasDia[i];	
+			}
+			
+			for (int i = 0; i < venda.length; i+= 2) {
+				for (int j = 0; j < venda.length -2; j+= 2) {
+					if(venda[j] < venda[j + 2]) {
+					double aux = venda[j];
+					venda[j] = venda[j+2];
+					venda[j+2] = aux;
+				}
+			}
+			}
+			
+			for (int i = 0; i < tres.length; i++) {
+				tres[i] = venda[i];
+			}
+			
+			return venda;
+	
+}
+	public void relatorioVendas() {
+		System.out.println("Dia do mês	Total Vendido - R$");
+		for (int i = 0; i < totalVendasDia.length; i++) {
+			System.out.printf("%d%.2f", (i+1), totalVendasDia[i]);
+		}
+	}
+	
+}

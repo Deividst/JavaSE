@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Livro
+comment1.params=codigo\ titulo\ dataCompra\ quantidadeEstoque\ autorPrincipal
+comment1.target=Livro(int,\ java.lang.String,\ Data,\ int,\ Pessoa)
+comment10.params=autorPrincipal
+comment10.target=void\ setAutorPrincipal(Pessoa)
+comment11.params=
+comment11.target=Pessoa\ getAutorPrincipal()
+comment12.params=
+comment12.target=void\ exibirDados()
+comment2.params=codigo
+comment2.target=void\ setCodigo(int)
+comment3.params=
+comment3.target=int\ getCodigo()
+comment4.params=titulo
+comment4.target=void\ setTitulo(java.lang.String)
+comment5.params=
+comment5.target=java.lang.String\ getTitulo()
+comment6.params=dataCompra
+comment6.target=void\ setDataCompra(Data)
+comment7.params=
+comment7.target=Data\ getDataCompra()
+comment8.params=quantidadeEstoque
+comment8.target=void\ setQuantidadeEstoque(int)
+comment9.params=
+comment9.target=int\ getQuantidadeEstoque()
+numComments=13

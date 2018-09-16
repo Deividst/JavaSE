@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Cliente
+comment1.params=n
+comment1.target=Cliente(java.lang.String)
+comment2.params=valor
+comment2.target=void\ deposita(double)
+comment3.params=valor
+comment3.target=void\ retira(double)
+comment4.params=
+comment4.target=java.lang.String\ getNome()
+comment5.params=
+comment5.target=double\ getSaldoTotal()
+comment6.params=
+comment6.target=void\ cadastrarSenha()
+comment7.params=numero
+comment7.target=boolean\ verificarSenha(int)
+numComments=8

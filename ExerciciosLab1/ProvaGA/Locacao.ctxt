@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Locacao
+comment1.params=numero\ livro\ usuario\ funcionario\ dataLocacao
+comment1.target=Locacao(int,\ Livro,\ Pessoa,\ Pessoa,\ Data)
+comment10.params=dataLocacao
+comment10.target=void\ setDataLocacao(Data)
+comment11.params=
+comment11.target=Data\ getDataLocacao()
+comment12.params=
+comment12.target=void\ exibirDados()
+comment2.params=numero
+comment2.target=void\ setNumero(int)
+comment3.params=
+comment3.target=int\ getNumero()
+comment4.params=livro
+comment4.target=void\ setLivro(Livro)
+comment5.params=
+comment5.target=Livro\ getLivro()
+comment6.params=usuario
+comment6.target=void\ setUsuario(Pessoa)
+comment7.params=
+comment7.target=Pessoa\ getUsuario()
+comment8.params=funcionario
+comment8.target=void\ setFuncionario(Pessoa)
+comment9.params=
+comment9.target=Pessoa\ getFuncionario()
+numComments=13

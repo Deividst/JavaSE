@@ -1,0 +1,72 @@
+
+public class Deposito {
+	
+	private Produto[]  produto;
+	Teclado t = new Teclado();
+
+
+	public Deposito(int tamanho) {
+		this.produto = new Produto[tamanho];
+	}
+	
+	public void insereProdutos() {
+		for (int i = 0; i < produto.length; i++) {
+			produto[i] = new Produto(t.leInt("Informe um código do produto "+ i+1),t.leDouble("Informe o preço do produto" + i+1));
+		}
+	}
+	
+	public void exibeEstoque() {
+		for (int i = 0; i < produto.length; i++) {
+			produto[i].exibeProduto();
+		}
+	}
+	
+	public double precoMaisBaixo() {
+		double aux = 0;
+		for (int i = 0; i < produto.length; i++) {
+			if (produto[i].getPreco() > aux) {
+				aux = produto[i].getPreco();
+			}
+		}
+		return aux;
+		
+	}
+	
+	public Produto produtoMaisCaro() {
+		double aux = 0;
+		Produto pAux = produto[0];
+		
+		for (int i = 0; i < produto.length; i++) {
+		if (produto[i].getPreco() > aux) {
+			aux = produto[i].getPreco();
+			pAux = produto[i];
+		}
+		}
+		return pAux;
+		
+	}
+	
+	public double	precoMedio() {
+		double aux = 0;
+		for (int i = 0; i < produto.length; i++) {
+			aux += produto[i].getPreco();
+		}
+		return aux / produto.length;
+		
+	}
+	
+	public Produto buscaProduto(int codigo) {
+		for (int i = 0; i < produto.length; i++) {	
+			if (codigo == produto[i].getCodigo()) {
+				return produto[i];
+			} 
+			
+		}
+		
+		return null;
+		
+		
+	}
+	
+	
+}

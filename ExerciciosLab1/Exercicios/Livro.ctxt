@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Livro
+comment1.params=codigo\ titulo
+comment1.target=Livro(int,\ java.lang.String)
+comment10.params=autor
+comment10.target=void\ setAutor(Pessoa)
+comment11.params=
+comment11.target=Pessoa\ getAutor()
+comment12.params=
+comment12.target=void\ exibirDados()
+comment2.params=codigo\ titulo\ autor
+comment2.target=Livro(int,\ java.lang.String,\ Pessoa)
+comment3.params=
+comment3.target=void\ retira()
+comment4.params=
+comment4.target=void\ devolve()
+comment5.params=
+comment5.target=int\ getCodigo()
+comment6.params=codigo
+comment6.target=void\ setCodigo(int)
+comment7.params=titulo
+comment7.target=void\ setTitulo(java.lang.String)
+comment8.params=
+comment8.target=java.lang.String\ getTitulo()
+comment9.params=
+comment9.target=char\ getSituacao()
+numComments=13

@@ -1,0 +1,73 @@
+import java.lang.invoke.SwitchPoint;
+
+public class TesteViajem {
+
+	public static void main(String[] args) {
+		
+		Viajem v = new Viajem();
+		Teclado t = new Teclado();
+		
+		
+		
+			
+		int op;
+		boolean ok = false;
+		do {
+			do {
+		System.out.println("--- Bem vindo ---");
+		System.out.println("1 - Vende lugar" +
+					"\n" + "2 - Desistência" +
+					"\n" + "3 - Lista de lugares" +
+					"\n" + "4 - Listar lugares livres"+
+					"\n" + "5 - Buscar Passageiro" +
+					"\n" + "6 - Encerrar");
+		
+		 op = t.leInt("Escolha uma opção");
+		 if (op >= 1 && op <= 6) {
+			 ok = true;
+		 } else {
+			 System.out.println("Opção invalida");
+		 }
+		 
+			} while(!ok);
+		
+	
+		
+		switch(op){
+			
+		case 1:
+			v.vendeLugar(t.leString("Informe o nome"));
+			System.out.println("Venda cooncluida com sucesso");
+			break;
+		case 2:
+			boolean rep = v.desistencia(t.leString("Informe o nome"));
+			if (rep == true) {
+				System.out.println("Lugar limpo com sucesso");
+			} else {
+				System.out.println("Passageiro não encontrado");
+			}
+			break;
+		case 3:
+			v.listarLugares();
+			break;
+		case 4:
+			v.listaLugaresLivres();
+			break;
+		case 5:
+			int rep1 = v.buscaPassageiro(t.leString("Informe o nome"));
+			if (rep1 != 0) {
+				System.out.println("Passageiro encontrado com sucesso");
+			} else {
+				System.out.println("Passageiro não encontrado");
+			}
+			break;
+		case 6:
+			op = 0;
+			System.exit(0);
+			
+		}
+		}while(op != 0);
+		
+		}
+
+}
